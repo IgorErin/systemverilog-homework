@@ -18,11 +18,13 @@ module mux_4_1
   output [3:0] y
 );
 
-  // TODO
+  logic [3:0] y_right;
+  logic [3:0] y_left ;
 
-  // Using code for mux_2_1 as an example,
-  // write code for 4:1 mux using "?:" operator
+  assign y_right = sel[0] ? d3 : d2;
+  assign y_left  = sel[0] ? d1 : d0;
 
+  assign y = sel[1] ? y_right : y_left;
 
 endmodule
 
