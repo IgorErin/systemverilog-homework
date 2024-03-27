@@ -22,11 +22,12 @@ module mux_4_1
   output logic [3:0] y
 );
 
-  // TODO
+  logic [3:0] low, hig;
 
-  // Using code for mux_2_1 as an example,
-  // write code for 4:1 mux using the "if" statement
+  mux_2_1 lowmux(d0, d1, sel[0], low);
+  mux_2_1 higmux(d2, d3, sel[0], hig);
 
+  mux_2_1 result(low, hig, sel[1], y);
 
 endmodule
 

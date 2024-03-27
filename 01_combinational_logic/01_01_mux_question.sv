@@ -18,8 +18,8 @@ module mux_4_1
   output [3:0] y
 );
 
-  logic [3:0] y_right;
-  logic [3:0] y_left ;
+  wire [3:0] y_right;
+  wire [3:0] y_left ;
 
   assign y_right = sel[0] ? d3 : d2;
   assign y_left  = sel[0] ? d1 : d0;
