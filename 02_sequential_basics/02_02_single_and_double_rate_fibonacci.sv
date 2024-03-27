@@ -31,9 +31,7 @@ module fibonacci_2
   output logic [15:0] num2
 );
 
-  // Task:
-  // Implement a module that generates two fibonacci numbers per cycle
-
+  
 
 endmodule
 
