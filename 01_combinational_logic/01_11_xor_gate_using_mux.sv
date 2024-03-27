@@ -18,11 +18,19 @@ module xor_gate_using_mux
     output o
 );
 
-  // TODO
+  wire true = 1;
+  wire false = 0;
 
-  // Implement xor gate using instance(s) of mux,
-  // constants 0 and 1, and wire connections
+  logic a_or_b;
+  logic a_and_b;
+  logic notand;
 
+  mux ormux(b, true, a, a_or_b);
+  mux andmux(false, b, a, a_and_b);
+
+  mux notg(true, false, a_and_b, notand);
+
+  mux xorg(false, notand, a_or_b, o);
 
 endmodule
 

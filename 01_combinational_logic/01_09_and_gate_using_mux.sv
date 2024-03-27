@@ -18,11 +18,10 @@ module and_gate_using_mux
     output o
 );
 
-  // TODO
+  wire true  = 1;
+  wire false = 0;
 
-  // Implement and gate using instance(s) of mux,
-  // constants 0 and 1, and wire connections
-
+  mux andg(false, b, a, o);
 
 endmodule
 

@@ -17,12 +17,10 @@ module or_gate_using_mux
     input  b,
     output o
 );
+  wire true = 1;
+  wire false = 0;
 
-  // TODO
-
-  // Implement or gate using instance(s) of mux,
-  // constants 0 and 1, and wire connections
-
+  mux org(b, true, a, o);
 
 endmodule
 

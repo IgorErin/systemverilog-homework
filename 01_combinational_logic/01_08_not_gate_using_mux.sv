@@ -17,11 +17,10 @@ module not_gate_using_mux
     output o
 );
 
-  // TODO
+  wire true  = 1;
+  wire false = 0;
 
-  // Implement not gate using instance(s) of mux,
-  // constants 0 and 1, and wire connections
-
+  mux notg(true, false, i, o);
 
 endmodule
 
